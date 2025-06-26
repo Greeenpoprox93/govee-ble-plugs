@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
-from homeassistant.components.bluetooth.passive_update_coordinator import (
+from homeassistant.components.bluetooth.passive_update_coordinator import ( # type: ignore
     PassiveBluetoothCoordinatorEntity,
 )
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.helpers import device_registry as dr
-from homeassistant.helpers.device_registry import DeviceInfo
+from homeassistant.config_entries import ConfigEntry # type: ignore
+from homeassistant.helpers import device_registry as dr # type: ignore
+from homeassistant.helpers.device_registry import DeviceInfo # type: ignore
 
 from .const import MANUFACTURER
 from .coordinator import GoveePlugDataUpdateCoordinator

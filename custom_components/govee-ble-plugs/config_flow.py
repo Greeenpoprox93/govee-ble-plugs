@@ -3,15 +3,15 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from bleak.backends.device import BLEDevice
-import voluptuous as vol
+from bleak.backends.device import BLEDevice # type: ignore
+import voluptuous as vol # type: ignore
 
-from homeassistant.components.bluetooth import (
+from homeassistant.components.bluetooth import ( # type: ignore
     BluetoothServiceInfoBleak,
     async_discovered_service_info,
 )
-from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
-from homeassistant.const import CONF_ACCESS_TOKEN, CONF_ADDRESS, CONF_MODEL
+from homeassistant.config_entries import ConfigFlow, ConfigFlowResult # type: ignore
+from homeassistant.const import CONF_ACCESS_TOKEN, CONF_ADDRESS, CONF_MODEL # type: ignore
 
 from .const import DOMAIN
 from .plugs import (
@@ -24,7 +24,7 @@ from .plugs import (
 _LOGGER: logging.Logger = logging.getLogger(__package__)
 
 
-class GoveeBlePlugsConfigFlow(ConfigFlow, domain=DOMAIN):
+class GoveeBlePlugsConfigFlow(ConfigFlow, domain=DOMAIN): # type: ignore
     VERSION = 1
 
     def __init__(self) -> None:

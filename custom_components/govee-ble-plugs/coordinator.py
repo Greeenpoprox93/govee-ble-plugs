@@ -4,17 +4,17 @@ import logging
 from typing import TYPE_CHECKING, Any
 
 
-from homeassistant.components import bluetooth
-from homeassistant.components.bluetooth.passive_update_coordinator import (
+from homeassistant.components import bluetooth # type: ignore
+from homeassistant.components.bluetooth.passive_update_coordinator import ( # type: ignore
     PassiveBluetoothDataUpdateCoordinator,
 )
-from homeassistant.const import Platform
-from homeassistant.core import HomeAssistant, callback
+from homeassistant.const import Platform # type: ignore
+from homeassistant.core import HomeAssistant, callback # type: ignore
 
 from .plugs import GoveePlugApi
 
 if TYPE_CHECKING:
-    from bleak.backends.device import BLEDevice
+    from bleak.backends.device import BLEDevice # type: ignore
 
 _LOGGER: logging.Logger = logging.getLogger(__package__)
 PLATFORMS: list[str] = [Platform.SWITCH]

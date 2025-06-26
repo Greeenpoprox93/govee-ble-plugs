@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from homeassistant.components import bluetooth
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_ACCESS_TOKEN, CONF_ADDRESS, CONF_MODEL, Platform
-from homeassistant.core import HomeAssistant
-from homeassistant.exceptions import ConfigEntryNotReady
+from homeassistant.components import bluetooth # type: ignore
+from homeassistant.config_entries import ConfigEntry # type: ignore
+from homeassistant.const import CONF_ACCESS_TOKEN, CONF_ADDRESS, CONF_MODEL, Platform # type: ignore
+from homeassistant.core import HomeAssistant # type: ignore
+from homeassistant.exceptions import ConfigEntryNotReady # type: ignore
 
 from .const import DOMAIN
 from .coordinator import GoveePlugDataUpdateCoordinator
